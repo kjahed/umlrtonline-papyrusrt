@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ca.jahed.papyrusrt.remote.feature_1.0.0.201902081209.jar" id="ca.jahed.papyrusrt.remote.feature" version="1.0.0.201902081209">
+      <category name="remote"/>
+   </feature>
+   <category-def name="remote" label="Remote Model Execution"/>
+</site>

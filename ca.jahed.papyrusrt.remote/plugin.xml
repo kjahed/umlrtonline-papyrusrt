@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.debug.core.launchConfigurationTypes">
+	    <launchConfigurationType
+	        name="Execute model remotely"
+	        delegate="ca.jahed.papyrusrt.remote.PapyrusrtLaunchConfigurationDelegate"
+	        modes="run"
+	        extension="uml"
+	        default= "true"
+	        id="ca.jahed.papyrusrt.remote.launchConfigurationType">
+	    </launchConfigurationType>
+	</extension>
+
+	<extension point="org.eclipse.debug.ui.launchShortcuts">
+	    <shortcut
+	        class="ca.jahed.papyrusrt.remote.PapyrusrtLaunchShortcut"
+	        id="ca.jahed.papyrusrt.remote.shortcut"
+	        label="Execute model remotely"
+	        modes="run">
+	        <contextualLaunch>
+	            <enablement>
+	                <with
+	                    variable="selection">
+	                    <count
+	                        value="+">
+	                    </count>
+	                </with>
+	            </enablement>
+	        </contextualLaunch>
+	    </shortcut>
+	</extension>
+
+	<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+	    <launchConfigurationTabGroup
+	        class="ca.jahed.papyrusrt.remote.PapyrusrtLaunchTabGroup"
+	        id="ca.jahed.papyrusrt.remote.launchConfigurationTabGroup"
+	        type="ca.jahed.papyrusrt.remote.launchConfigurationType">
+	    </launchConfigurationTabGroup>
+	</extension>
+
+</plugin>
